@@ -9,7 +9,7 @@ interface Props {
 }
 
 const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await getAllBlogIds('research');
+  const paths = await getAllBlogIds();
   return {
     paths,
     fallback: false,
@@ -17,7 +17,7 @@ const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const getStaticProps: GetStaticProps = async ({ params }) => {
-  const blogData = await getBlogData(params?.id as string, 'research');
+  const blogData = await getBlogData(params?.id as string);
   return {
     props: { blogData },
   };

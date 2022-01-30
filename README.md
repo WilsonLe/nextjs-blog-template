@@ -2,6 +2,26 @@
 
 # Get Started
 
+Clone the repository and navigate to it:
+
+```
+git clone https://github.com/WilsonLe/nextjs-blog-template
+
+cd nextjs-blog-template
+```
+
+Install dependencies:
+
+```
+yarn install
+```
+
+Run development server:
+
+```
+yarn dev
+```
+
 # How to edit
 
 To edit text on the webpage, navigate to folder config, open index.ts. This file contains text value for the entire website, stored in JSON format. The details and descriptions are specified in the file.
@@ -20,6 +40,31 @@ To edit text on the webpage, navigate to folder config, open index.ts. This file
     - thumbnailURL: Thumbnail of the blog post
     - thumbnailAlt: Description of the thumbnail. Useful when readers can't load thumbnail, this text will be displayed instead.
     - description: Short description of the blog post.
+
+# How to deploy
+
+The easiest way to deploy and host NextJS application is by using [Vercel](https://vercel.com). However, if you wish you deploy on your own server, you can build and deploy with the following commands:
+
+1. Build production-ready NextJS application
+
+```
+yarn build
+```
+
+2. Start NextJS application:
+
+```
+yarn start
+```
+
+Here are several server hosting services that I know:
+
+- [AWS](https://aws.amazon.com)
+- [GCP](https://cloud.google.com)
+- [Linode](https://linode.com)
+- [DigitalOcean](https://digitalocean.com)
+- [Netlify](https://netlify.com)
+- [Heroku](https://heroku.com)
 
 # Author
 
