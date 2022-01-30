@@ -24,16 +24,16 @@ yarn dev
 
 # How to edit
 
-To edit text on the webpage, navigate to folder __config__, open __index.ts__. This file contains text value for the entire website, stored in JSON format. The details and descriptions are specified in the file.
+To edit text on the webpage, navigate to folder **config**, open **index.ts**. This file contains text value for the entire website, stored in JSON format. The details and descriptions are specified in the file.
 
 # How to upload
 
 - To upload personal blogs, go to folder public/blogs, and add the markdown file of the blog.
 - To upload images, go to folder public/images, and add images in customizable folders. When referencing images, note that the base directory is public. So referencing an image "public/images/logo.jpeg" will be "/images/logo.jpeg"
-- __IMPORTANT__:
+- **IMPORTANT**:
   - When uploading blogs, the markdown file must not have white space between the letters. For instance:
-    - "my first blog post" is __invalid__.
-    - "my-first-blog-post" is __valid__.
+    - "my first blog post" is **invalid**.
+    - "my-first-blog-post" is **valid**.
   - The markdown files must have a valid header, which includes:
     - title: the title of the blog post
     - order: the order in which the blog post appear. Smallest will be placed on the top left, largest will be placed on the bottom right.
@@ -43,7 +43,9 @@ To edit text on the webpage, navigate to folder __config__, open __index.ts__. T
 
 # How to deploy
 
-The easiest way to deploy and host NextJS application is by using [Vercel](https://vercel.com). However, if you wish you deploy on your own server, you can build and deploy with the following commands:
+The easiest way to deploy and host NextJS application is by using [Vercel](https://vercel.com). Here is the link on how to deploy a NextJS project on Vercel: [Deploying Your Next.js Project with Vercel](https://vercel.com/guides/deploying-nextjs-with-vercel#step-2:-deploying-your-next.js-project-with-vercel).
+
+However, if you wish you deploy on your own server, you can build and deploy with the following commands:
 
 1. Build production-ready NextJS application
 
