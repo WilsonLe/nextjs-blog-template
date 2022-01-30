@@ -1,6 +1,6 @@
 {
-  "name": "ngohuan",
-  "private": true,
+  "name": "nextjs-blog-template",
+  "public": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
