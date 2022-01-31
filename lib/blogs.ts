@@ -3,7 +3,10 @@ import path from 'path';
 import matter from 'gray-matter';
 import { BlogData, BlogHeaderData } from '../types';
 import { remark } from 'remark';
-import html from 'remark-html';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
 
 const blogsDir = path.join(process.cwd(), 'public', 'blogs');
 
@@ -78,7 +81,10 @@ export async function getBlogData(id: string) {
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
-    .use(html)
+    .use(remarkParse)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
     .process(matterResult.content);
 
   const htmlContent = processedContent.toString();
